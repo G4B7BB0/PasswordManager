@@ -1,20 +1,20 @@
 # PasswordManager
 
-Piccolo password manager da terminale scritto in C#/.NET. Il progetto è pensato per studio e uso personale; non è stato sottoposto a un audit di sicurezza indipendente.
+A small command-line password manager written in C#/.NET. This project is intended for learning and personal use; it has not undergone an independent security audit.
 
-## Schermata
+## Preview
 
-Anteprima grafica del comando `help`:
+Graphic preview of the `help` command:
 
-![Anteprima dei comandi di PasswordManager in un terminale](docs/terminal-help.svg)
+![PasswordManager commands shown in a terminal](docs/terminal-help.svg)
 
-## Requisiti
+## Requirements
 
 - .NET 10 SDK
 
-## Avvio
+## Getting started
 
-Apri un terminale nella cartella del progetto ed esegui:
+Open a terminal in the project directory and run:
 
 ```sh
 dotnet run -- setup
@@ -23,20 +23,20 @@ dotnet run -- get example.com
 dotnet run -- list
 ```
 
-`setup` crea `vault.dat` e chiede due volte una password master di almeno 12 caratteri. Gli altri comandi la chiedono nel terminale senza mostrarla. Con `add`, premi Invio al prompt della password per generarne una casuale.
+`setup` creates `vault.dat` and prompts you to enter a master password of at least 12 characters twice. The other commands prompt for it in the terminal without displaying it. When using `add`, press Enter at the password prompt to generate a random password.
 
-Il programma salva l'archivio nella cartella di lavoro corrente. Esegui i comandi sempre dalla stessa cartella. Fai copie di backup sicure di `vault.dat`: se lo perdi o dimentichi la password master, non c'è una procedura di recupero. Non condividere il file del vault.
+The program stores the vault in the current working directory. Run commands from the same directory each time. Keep secure backups of `vault.dat`: there is no recovery process if you lose the file or forget the master password. Do not share the vault file.
 
-## Protezione dei dati
+## Data protection
 
-Il vault usa AES-GCM con nonce e tag di autenticazione, una salt casuale per archivio e PBKDF2-HMAC-SHA-256 con 600.000 iterazioni per derivare la chiave dalla password master. Su sistemi Unix il file viene impostato con permessi di lettura e scrittura per il solo utente. La password master non viene salvata separatamente né passata come argomento dei comandi.
+The vault uses AES-GCM with an authentication nonce and tag, a random per-vault salt, and PBKDF2-HMAC-SHA-256 with 600,000 iterations to derive a key from the master password. On Unix systems, the file is set to read/write access for the owner only. The master password is neither stored separately nor passed as a command-line argument.
 
-Queste misure non sostituiscono un audit indipendente. La sicurezza dipende anche dalla robustezza della password master, dal dispositivo e dai backup. La password recuperata con `get` viene mostrata nel terminale.
+These measures do not replace an independent security audit. Security also depends on the strength of the master password, the device, and backups. Passwords retrieved with `get` are displayed in the terminal.
 
-## Formato e compatibilità
+## Format and compatibility
 
-Il formato dell'archivio è versionato. Le versioni precedenti del progetto usavano un formato differente e non vengono migrate automaticamente: crea un nuovo archivio e trasferisci manualmente solo i dati che vuoi conservare.
+The vault format is versioned. Earlier versions of the project used a different format and are not migrated automatically. Create a new vault and manually transfer only the data you want to keep.
 
-## Licenza
+## License
 
-Questo progetto è distribuito con licenza MIT. Vedi [LICENSE](LICENSE).
+This project is distributed under the MIT License. See [LICENSE](LICENSE).
