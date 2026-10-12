@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" role="img" aria-labelledby="title desc">
+  <title id="title">PasswordManager — guida del terminale</title>
+  <desc id="desc">Anteprima grafica del comando help, con i comandi disponibili e la nota sulla password master.</desc>
+  <rect width="960" height="470" rx="18" fill="#0b1020"/>
+  <rect x="1" y="1" width="958" height="468" rx="17" fill="none" stroke="#26334c" stroke-width="2"/>
+  <path d="M18 1h924a17 17 0 0 1 17 17v35H1V18A17 17 0 0 1 18 1Z" fill="#151e31"/>
+  <circle cx="29" cy="27" r="7" fill="#ff6b6b"/>
+  <circle cx="53" cy="27" r="7" fill="#ffd166"/>
+  <circle cx="77" cy="27" r="7" fill="#06d6a0"/>
+  <text x="480" y="32" text-anchor="middle" fill="#a8b3c7" font-family="Segoe UI, sans-serif" font-size="14">PasswordManager — terminale</text>
+  <text x="34" y="92" fill="#8be9fd" font-family="Cascadia Code, Consolas, monospace" font-size="16">PS&gt; dotnet run -- help</text>
+  <text x="34" y="138" fill="#f2f5fa" font-family="Cascadia Code, Consolas, monospace" font-size="20" font-weight="700">PasswordManager</text>
+  <text x="34" y="180" fill="#a9b7cc" font-family="Cascadia Code, Consolas, monospace" font-size="16">Comandi:</text>
+  <text x="56" y="212" fill="#f2f5fa" font-family="Cascadia Code, Consolas, monospace" font-size="16">dotnet run -- setup</text>
+  <text x="56" y="242" fill="#f2f5fa" font-family="Cascadia Code, Consolas, monospace" font-size="16">dotnet run -- add &lt;sito&gt; &lt;utente&gt;</text>
+  <text x="56" y="272" fill="#f2f5fa" font-family="Cascadia Code, Consolas, monospace" font-size="16">dotnet run -- get &lt;sito&gt;</text>
+  <text x="56" y="302" fill="#f2f5fa" font-family="Cascadia Code, Consolas, monospace" font-size="16">dotnet run -- list</text>
+  <text x="56" y="332" fill="#f2f5fa" font-family="Cascadia Code, Consolas, monospace" font-size="16">dotnet run -- help</text>
+  <rect x="30" y="365" width="900" height="76" rx="10" fill="#111b2b" stroke="#24344d"/>
+  <text x="48" y="397" fill="#a9b7cc" font-family="Cascadia Code, Consolas, monospace" font-size="14">La password master e le password dei servizi vengono richieste nel terminale</text>
+  <text x="48" y="422" fill="#a9b7cc" font-family="Cascadia Code, Consolas, monospace" font-size="14">e non vanno inserite negli argomenti dei comandi.</text>
+</svg>

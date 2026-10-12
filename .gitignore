@@ -1,0 +1,19 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio local state
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Password vault and temporary writes
+vault.dat
+vault.dat.tmp
+master.key
+
+# Test and publish output
+TestResults/
+publish/
